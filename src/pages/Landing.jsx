@@ -6,7 +6,7 @@ export default function Landing() {
     <div 
       className="w-full min-h-screen"
       style={{
-        backgroundImage: "url('/hero_main.png')",
+        //backgroundImage: "url('/hero_main.png')",
         backgroundAttachment: "scroll",
         backgroundSize: "cover",
         backgroundPosition: "top",
