@@ -34,8 +34,8 @@ export default function Landing() {
 
           {/* Description */}
           <p 
-            className="text-base md:text-lg max-w-2xl leading-relaxed mb-8 text-justify"
-            style={{ color: "#9494A9" }}
+            className="text-lg md:text-xl max-w-2xl ml-1 leading-relaxed mb-8 text-justify"
+            style={{ color: "#9494A9", fontFamily: '"roobert", "roobert Fallback", sans-serif' }}
           >
             Haven is a virtual workspace designed for seamless collaboration — one where you can meet, chat, and work together naturally, as if you're in the same room.
           </p>

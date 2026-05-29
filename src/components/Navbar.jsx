@@ -28,8 +28,8 @@ export default function Navbar() {
           <a
             key={item}
             href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-            className="text-gray-600 hover:text-gray-900 transition text-sm"
-            style={{ fontWeight: 400 }}
+            className="nav-item text-sm"
+            style={{ fontWeight: 400, fontFamily: '"roobert", "roobert Fallback", sans-serif' }}
           >
             {item}
           </a>
@@ -37,7 +37,7 @@ export default function Navbar() {
       </nav>
 
       {/* CTA Button */}
-      <button className="px-6 py-2.5 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition text-sm flex-shrink-0" style={{ fontWeight: 600 }}>
+      <button className="px-6 py-2.5 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition text-sm flex-shrink-0" style={{ fontWeight: 600, fontFamily: '"roobert", "roobert Fallback", sans-serif' }}>
         Get Started
       </button>
     </header>
