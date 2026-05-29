@@ -2,10 +2,24 @@ const navItems = ["About", "Research & Insights", "Marble Labs", "API", "Spark",
 
 export default function Navbar() {
   return (
-    <header className="flex items-center justify-between px-16 py-4" style={{ backgroundColor: "#F9F9FB" }}>
+    <header className="flex items-center justify-between px-16 py-4" style={{ backgroundColor: "#F9F9FB", fontFamily: "'ES Build', sans-serif" }}>
       {/* Logo */}
-      <div className="flex items-center gap-2 flex-shrink-0">
-        <span className="text-gray-900 font-bold text-lg">Haven</span>
+      <div className="flex items-center gap-4 flex-shrink-0">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 40 40"
+          fill="none"
+          style={{ color: "#6B8E23" }}
+        >
+          <path
+            d="M20 2L24.47 15.53H38.54L27.54 23.47L32 37L20 29.06L8 37L12.46 23.47L1.46 15.53H15.53L20 2Z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            fill="none"
+          />
+        </svg>
+        <span className="text-gray-900 font-bold text-2xl" style={{ fontWeight: 600 }}>Haven</span>
       </div>
 
       {/* Navigation Menu - Centered */}
@@ -14,7 +28,8 @@ export default function Navbar() {
           <a
             key={item}
             href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-            className="text-gray-600 hover:text-gray-900 transition text-sm font-medium"
+            className="text-gray-600 hover:text-gray-900 transition text-sm"
+            style={{ fontWeight: 400 }}
           >
             {item}
           </a>
@@ -22,7 +37,7 @@ export default function Navbar() {
       </nav>
 
       {/* CTA Button */}
-      <button className="px-6 py-2.5 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition font-medium text-sm flex-shrink-0">
+      <button className="px-6 py-2.5 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition text-sm flex-shrink-0" style={{ fontWeight: 600 }}>
         Get Started
       </button>
     </header>
