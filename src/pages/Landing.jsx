@@ -6,11 +6,7 @@ export default function Landing() {
     <div 
       className="w-full min-h-screen"
       style={{
-       // backgroundImage: "url('/hero_main.png')",
-        backgroundAttachment: "scroll",
-        backgroundSize: "cover",
-        backgroundPosition: "top",
-        backgroundRepeat: "no-repeat"
+        backgroundColor: "#F9F9FB"
       }}
     >
       {/* Content Container */}

@@ -2,12 +2,9 @@ const navItems = ["About", "Research & Insights", "Marble Labs", "API", "Spark",
 
 export default function Navbar() {
   return (
-    <header className="flex items-center justify-between px-16 py-4">
+    <header className="flex items-center justify-between px-16 py-4" style={{ backgroundColor: "#F9F9FB" }}>
       {/* Logo */}
       <div className="flex items-center gap-2 flex-shrink-0">
-        <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
-          <span className="text-white font-bold text-sm">⚡</span>
-        </div>
         <span className="text-gray-900 font-bold text-lg">Haven</span>
       </div>
 
