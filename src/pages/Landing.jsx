@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Canvas3D from "../components/Canvas3D";
+import SketchFabModel from "../components/SkectchFabModel";
 
 export default function Landing() {
   return (
@@ -51,36 +52,8 @@ export default function Landing() {
 
           {/* Right Content - 3D Model */}
           <div style={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", justifyContent: "center" }} className="hidden lg:flex">
-            <Canvas3D />
-            {/* <div className="sketchfab-embed-wrapper" style={{ 
-  width: '100%', 
-  height: '600px', 
-  position: 'relative', 
-  overflow: 'hidden',
-  pointerEvents: 'none' 
-}}>
-  <iframe 
-    title="Cozy Isometric Room" 
-    frameBorder="0" 
-    allowFullScreen 
-    mozallowfullscreen="true" 
-    webkitallowfullscreen="true" 
-    allow="autoplay; fullscreen; xr-spatial-tracking" 
-    execution-while-out-of-viewport="true" 
-    execution-while-not-rendered="true" 
-    web-share="true" 
-    src="https://sketchfab.com/models/30523d6505db43a887eed8c040971146/embed?transparent=1&ui_infos=0&ui_controls=0&ui_watermark=0&ui_stop=0&ui_inspector=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_related=0&ui_hint=0&autostart=1"
-    style={{ 
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%', 
-      height: '650px', 
-      border: 'none',
-      background: '#F9F9FB'
-    }}
-  />
-</div> */}
+            {/* <Canvas3D /> */}
+            <SketchFabModel/>
           </div>
         </div>
       </div>
