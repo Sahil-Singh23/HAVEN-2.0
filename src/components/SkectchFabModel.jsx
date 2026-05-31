@@ -83,7 +83,7 @@ export default function SketchFabModel() {
           height: "542px",
           position: "relative",
           overflow: "hidden",
-          pointerEvents: "none",
+          //pointerEvents: "none",
         }}
       >
         <iframe
