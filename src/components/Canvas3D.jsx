@@ -1,27 +1,62 @@
 import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
 import { Model } from "./Model3D";
 import { Suspense } from "react";
+import * as THREE from "three";
+import Loader from "./Loader";
 
 export default function Canvas3D() {
   return (
-    <Canvas 
-      style={{ width: "100%", height: "100%", display: "block" }}
+    <>
+    <Loader></Loader>
+    <Canvas
+      style={{ width: "100%", height: "500px", display: "block" }}
       dpr={[1, 2]}
-      camera={{ position: [0, 0, 3], fov: 75 }}
+      gl={{
+        antialias: true,
+        toneMapping: THREE.NoToneMapping,
+        outputColorSpace: THREE.SRGBColorSpace,
+        preserveDrawingBuffer: true,
+      }}
+      camera={{ position: [5, 4, 5], fov: 35, near: 0.1, far: 1000 }}
     >
-      <OrbitControls 
-        autoRotate 
-        autoRotateSpeed={2}
+      {/* Match page background */}
+      <color attach="background" args={["#F9F9FB"]} />
+
+      {/* Environment map for sphere reflections */}
+      <Environment preset="city" background={false} />
+
+      {/* Soft ambient fill - needed for MeshStandardMaterial (sphere) */}
+      <ambientLight intensity={0.8} color="#ffffff" />
+
+      {/* Main directional light */}
+      <directionalLight
+        position={[10, 15, 10]}
+        intensity={1.5}
+        color="#ffffff"
+      />
+
+      {/* Fill light */}
+      <directionalLight position={[-8, 8, -8]} intensity={0.4} color="#e0dce8" />
+
+      {/* Hemisphere light */}
+      <hemisphereLight args={["#f0eef5", "#d4c8b8", 0.3]} />
+
+      {/* Orbit controls */}
+      <OrbitControls
         enableZoom={true}
         enablePan={false}
+        autoRotate={false}
+        minPolarAngle={Math.PI / 6}
+        maxPolarAngle={Math.PI / 2.2}
+        target={[0, 0, 0]}
       />
-      <ambientLight intensity={3} />
-      <directionalLight position={[10, 10, 10]} intensity={2} />
-      <pointLight position={[-10, -10, 10]} intensity={1} />
+
+      {/* Model */}
       <Suspense fallback={null}>
-        <Model url="/machine.glb" />
+        <Model url="/model/machine.glb" />
       </Suspense>
     </Canvas>
+    </>
   );
 }
