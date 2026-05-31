@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Canvas3D from "../components/Canvas3D";
+import SketchFabModel from "../components/SkectchFabModel";
 
 export default function Landing() {
   return (
@@ -15,7 +17,9 @@ export default function Landing() {
         <Navbar />
 
         {/* Hero Section */}
-        <div className="flex-1 flex flex-col items-start mt-56 px-16 text-left">
+        <div className="flex-1 flex items-start mt-20 px-16 text-left gap-12 overflow-hidden">
+          {/* Left Content */}
+          <div className="flex flex-col flex-1 mt-34" style={{ minWidth: 0 }}>
           {/* Main Heading */}
           <h1 
             className="text-5xl md:text-[85px] leading-tight -mb-8"
@@ -44,6 +48,13 @@ export default function Landing() {
           <button className="w-16 h-16 bg-black text-white rounded-full hover:bg-gray-800 transition font-semibold flex items-center justify-center shadow-lg hover:shadow-xl">
             <ArrowRight size={24} />
           </button>
+          </div>
+
+          {/* Right Content - 3D Model */}
+          <div style={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", justifyContent: "center" }} className="hidden lg:flex">
+            {/* <Canvas3D /> */}
+            <SketchFabModel/>
+          </div>
         </div>
       </div>
     </div>
