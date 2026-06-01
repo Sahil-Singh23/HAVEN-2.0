@@ -1,4 +1,5 @@
-const navItems = ["About", "Research & Insights", "Marble Labs", "API", "Spark", "Careers"];
+const navItems = []
+//["About", "Research & Insights", "Marble Labs", "API", "Spark", "Careers"];
 
 export default function Navbar() {
   return (
