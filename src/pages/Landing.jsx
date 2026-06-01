@@ -45,9 +45,11 @@ export default function Landing() {
           </p>
 
           {/* CTA Button */}
-          <button className="w-16 h-16 bg-black text-white rounded-full hover:bg-gray-800 transition font-semibold flex items-center justify-center shadow-lg hover:shadow-xl">
-            <ArrowRight size={24} />
-          </button>
+          <a href="https://haven-interactive-world.vercel.app/">
+            <button className="w-16 h-16 bg-black text-white rounded-full hover:bg-gray-800 transition font-semibold flex items-center justify-center shadow-lg hover:shadow-xl" >
+              <ArrowRight size={24} />
+            </button>
+          </a>
           </div>
 
           {/* Right Content - 3D Model */}
